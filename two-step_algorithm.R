@@ -52,10 +52,10 @@ cohorts <- cohorts[as.numeric(args[[1]]) %% length(cohorts) + 1]
   parameters <- list()
   parameters$maxiter <- 500 # maximum iteration in step 2 (decomposition)
   parameters$tol <- 1e-05 # convergence rate
-  parameters$lam1 <- 3 # lambda_1
-  parameters$lam2 <- 1 # lambda_2
-  parameters$lam3 <- 4 # lambda_3
-  parameters$lam4 <- 1.5 # lambda_4
+  parameters$lam1 <- 6 # lambda_1
+  parameters$lam2 <- 2 # lambda_2
+  parameters$lam3 <- 8 # lambda_3
+  parameters$lam4 <- 3 # lambda_4
   ###################decomposition######################
   
   decomp_out <- step2_L1_decomposition(dimension, parameters, W)
