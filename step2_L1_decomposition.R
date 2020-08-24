@@ -90,7 +90,7 @@ iter=1
     Wx <- t(Wx1)-t(Wx2)
     ##########check stoping creteria & rank condition##########
 
-    obj_vals[iter] <- 0.5 * sum(abs(W -  Wx %*% Wy))+ lam1*sum(abs(Wx)) + lam2*sqrt(sum(Wx^2)) +lam3*sum(abs(Wy)) + lam4*sqrt(sum(Wy^2))
+    obj_vals[iter] <- sum(abs(W -  Wx %*% Wy))+ lam1*sum(abs(Wx)) + lam2*sqrt(sum(Wx^2)) +lam3*sum(abs(Wy)) + lam4*sqrt(sum(Wy^2))
  
     dif <- (abs(obj_vals[iter]- obj_vals[iter-1]))/obj_vals[iter-1] 
     if (dif < tol || is.nan(dif)) {
